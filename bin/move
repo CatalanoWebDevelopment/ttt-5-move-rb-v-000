@@ -4,17 +4,25 @@ require_relative '../lib/move.rb'
 
 # Code your CLI Here
 #learn spec/03_cli_spec.rb
+
+# Reset the board
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
+# Greet the user with Instructions
 puts "Welcome to Tic Tac Toe!"
 puts "To make your move, enter a value between 1-9, with 1 being the top left and 9 being the bottom right! Let's get started:"
 
+# Grab user input
 user_input = gets.strip
 
+# Set the index variable in the move method equal to the user input
 index = input_to_index(user_input)
 
+# Change the index to the position entered
 position = input_to_index(user_input)
 
+# Input position into the move method
 move(board, position, char = "X")
 
+# Display the output
 display_board(board)
